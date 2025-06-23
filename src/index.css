@@ -1,2 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 :root {
+	--blue-900: hsl(209, 23%, 22%); /* Dark Mode Elements */
+	--blue-950: hsl(207, 26%, 17%); /* Dark Mode Background */
+	--grey-950: hsl(200, 15%, 8%); /* Light Mode Text */
+	--grey-400: hsl(0, 0%, 50%); /* Light Mode Input */
+	--grey-50: hsl(0, 0%, 99%); /* Light Mode Background */
+	--white: hsl(0, 100%, 100%); /* Dark Mode Text & Light Mode Elements */
+}
+
+:root {
+	--family-primary: 'Nunito Sans', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body[data-theme='Dark'] {
+	--colors-text: var(--white);
+	--colors-bg: var(--blue-950);
+	--colors-ui-base: var(--blue-900);
+
+	--shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+}
+
+body[data-theme='Light'] {
+	--colors-text: var(--grey-950);
+	--colors-bg: var(--grey-50);
+	--colors-ui-base: var(--white);
+
+	--shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}
+
+body {
+	margin: 0;
+	font-family: 'Nunito Sans', sans-serif;
 }
