@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { fetchAllCountries } from '../../api/endpoints';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { setCountries } from '../../store/countries/countriesSlice';
+import CountriesList from '../../components/CountriesList';
 
 function CountriesListContainer() {
 	const countries = useAppSelector((state) => state.countries);
@@ -21,9 +22,7 @@ function CountriesListContainer() {
 
 	return (
 		<>
-			{countries.map((item) => (
-				<p>{item.name.common}</p>
-			))}
+			<CountriesList countries={countries} />
 		</>
 	);
 }

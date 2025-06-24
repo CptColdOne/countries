@@ -11,4 +11,13 @@ export type countryItemType = {
 			};
 		};
 	};
+	capital: string[];
+	region: string;
+	population: '';
+	flags: {
+		png: string;
+		svg: string;
+		alt: string;
+	};
+	numericCode: string;
 };

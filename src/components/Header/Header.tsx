@@ -20,13 +20,15 @@ function Header() {
 		<div className={styles.header}>
 			<div className={styles.content}>
 				<div className={styles.logo}>Where in the world?</div>
-				<div className={styles.mode_switcher} onClick={toggleTheme}>
-					{theme === 'Light' ? (
-						<IoMoonOutline size={'14px'} />
-					) : (
-						<IoMoon size={'14px'} />
-					)}
-					{theme === 'Light' ? 'Dark' : 'Light'} mode
+				<div className={styles.mode_switcher}>
+					<div className={styles.switcher} onClick={toggleTheme}>
+						{theme === 'Light' ? (
+							<IoMoonOutline size={'14px'} />
+						) : (
+							<IoMoon size={'14px'} />
+						)}
+						{theme === 'Light' ? 'Dark' : 'Light'} mode
+					</div>
 				</div>
 			</div>
 		</div>
