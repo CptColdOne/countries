@@ -6,7 +6,7 @@ function CountriesList({ countries }: CountriesListProps) {
 	return (
 		<div className={styles.wrapper}>
 			{countries.map((item) => (
-				<CountryCard key={item.numericCode} country={item} />
+				<CountryCard key={item.cca2} country={item} />
 			))}
 		</div>
 	);

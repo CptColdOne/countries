@@ -19,5 +19,5 @@ export type countryItemType = {
 		svg: string;
 		alt: string;
 	};
-	numericCode: string;
+	cca2: string;
 };

@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks';
 import styles from './Header.module.sass';
 import { changeTheme } from '../../store/theme/themeSlice';
 import { IoMoon, IoMoonOutline } from 'react-icons/io5';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
 	const theme = useAppSelector((state) => state.theme);
@@ -19,7 +20,10 @@ function Header() {
 	return (
 		<div className={styles.header}>
 			<div className={styles.content}>
-				<div className={styles.logo}>Where in the world?</div>
+				<NavLink className={styles.logo} to={'/'}>
+					Where in the world?
+				</NavLink>
+				{/* <div className={styles.logo}>Where in the world?</div> */}
 				<div className={styles.mode_switcher}>
 					<div className={styles.switcher} onClick={toggleTheme}>
 						{theme === 'Light' ? (

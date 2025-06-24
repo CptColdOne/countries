@@ -1,0 +1,37 @@
+.dropdown_container
+  position: relative
+  width: 200px
+  user-select: none
+
+.dropdown_header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 15px 20px
+  border-radius: 5px
+  box-shadow: var(--shadow)
+  cursor: pointer
+  color: var(--colors-text)
+  font-size: 14px
+  background-color: var(--colors-ui-base)
+
+.dropdown_list
+  position: absolute
+  top: calc(100% + 5px)
+  left: 0
+  width: 100%
+  background-color: var(--colors-ui-base)
+  border-radius: 5px
+  box-shadow: var(--shadow)
+  z-index: 100
+  padding: 0
+  margin: 0
+
+.dropdown_item
+  padding: 10px 20px
+  cursor: pointer
+  color: var(--colors-text)
+  font-size: 14px
+  
+  &:hover
+    background-color: var(--colors-bg)
