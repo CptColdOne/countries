@@ -2,7 +2,8 @@ import axios from 'axios';
 
 const axiosInstanceBackend = axios.create({
 	// baseURL: `${import.meta.env.VITE_APP_HOST_LOCAL || window.location.origin}/api`,
-	baseURL: `${import.meta.env.VITE_APP_HOST_LOCAL}/v3.1`,
+	// baseURL: `${import.meta.env.VITE_APP_HOST_LOCAL}/v3.1`,
+	baseURL: 'https://restcountries.com/v3.1',
 });
 
 axiosInstanceBackend.interceptors.response.use(
