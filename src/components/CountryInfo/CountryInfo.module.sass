@@ -1,0 +1,74 @@
+.wrapper
+  display: flex
+  flex-direction: row
+  gap: 40px
+  width: 100%
+  margin-top: 20px
+
+.flag
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 50%
+
+  img
+    width: 100%
+    box-shadow: var(--shadow)
+
+.country_info
+  width: 50%
+  height: 100%
+  padding: 50px
+  color: var(--colors-text)
+
+.country_name
+  font-size: 24px
+  font-weight: 800
+  margin-bottom: 20px
+
+.info_columns
+  display: flex
+  width: 100%
+  gap: 40px
+  flex-wrap: wrap
+  font-size: 14px
+
+.info_column
+  display: flex
+  flex-direction: column
+  gap: 8px
+
+.info
+  display: flex
+  gap: 5px
+
+  span
+    font-weight: 800
+
+.borders
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  gap: 20px
+  margin-top: 60px
+  font-size: 14px
+
+  span
+    font-weight: 800
+
+.border_button
+  border-radius: 5px
+  box-shadow: var(--shadow)
+  padding: 5px 15px
+  cursor: pointer
+  background-color: var(--colors-ui-base)
+  color: var(--colors-text)
+  font-size: 14px
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: transform 0.3s ease
+  
+  &:hover
+    transform: scale(1.1)
