@@ -32,7 +32,7 @@ export const countriesSlice = createSlice({
 				state.data = action.payload;
 				state.loading = false;
 			})
-			.addCase(fetchCountriesThunk.rejected, (state, action) => {
+			.addCase(fetchCountriesThunk.rejected, (state, _action) => {
 				state.loading = false;
 				state.error = true;
 			});
