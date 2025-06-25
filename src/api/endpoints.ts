@@ -1,6 +1,5 @@
 import { axiosFetchDriverBackend } from '.';
 import {
-	countryInfoResponseType,
 	fetchAllCountriesResponseType,
 	selectedCountryItemType,
 } from './types';

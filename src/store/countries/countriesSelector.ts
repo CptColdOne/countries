@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { RootState } from '../types';
 
-export const selectAllCountries = (state: RootState) => state.countries;
+export const selectAllCountries = (state: RootState) => state.countries.data;
 
 export const selectFilteredCountries = createSelector(
 	[selectAllCountries, (state: RootState) => state.filters],

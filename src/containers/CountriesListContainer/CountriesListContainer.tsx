@@ -1,33 +1,23 @@
-import { useEffect, useState } from 'react';
-import { fetchAllCountries } from '../../api/endpoints';
+import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { setCountries } from '../../store/countries/countriesSlice';
+import { fetchCountriesThunk } from '../../store/countries/countriesSlice';
 import CountriesList from '../../components/CountriesList';
 import Spinner from '../../components/Spinner';
 import { selectFilteredCountries } from '../../store/countries/countriesSelector';
 
 function CountriesListContainer() {
-	const [isLoading, setIsLoading] = useState(true);
 	const countries = useAppSelector(selectFilteredCountries);
+	const { loading, error } = useAppSelector((state) => state.countries);
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
-		updateCountries();
-	}, []);
+		dispatch(fetchCountriesThunk());
+	}, [dispatch]);
 
-	const updateCountries = () => {
-		setIsLoading(true);
-
-		fetchAllCountries()
-			.then((resp) => {
-				dispatch(setCountries(resp));
-				setIsLoading(false);
-			})
-			.catch((err) => console.log('error: ', err));
-	};
-
-	return (
-		<>{isLoading ? <Spinner /> : <CountriesList countries={countries} />}</>
+	return loading ? (
+		<Spinner />
+	) : (
+		<CountriesList countries={countries} error={error} />
 	);
 }
 

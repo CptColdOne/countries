@@ -2,12 +2,14 @@ import styles from './CountriesList.module.sass';
 import { CountriesListProps } from './types';
 import CountryCard from '../CountryCard';
 
-function CountriesList({ countries }: CountriesListProps) {
+function CountriesList({ countries, error }: CountriesListProps) {
 	return (
 		<div className={styles.wrapper}>
-			{countries.map((item) => (
-				<CountryCard key={item.cca2} country={item} />
-			))}
+			{error ? (
+				<></>
+			) : (
+				countries.map((item) => <CountryCard key={item.cca2} country={item} />)
+			)}
 		</div>
 	);
 }
