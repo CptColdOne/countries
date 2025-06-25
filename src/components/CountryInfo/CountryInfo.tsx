@@ -71,16 +71,18 @@ function CountryInfo() {
 				</div>
 
 				<div className={styles.borders}>
-					<span>Borders:</span>
-					{selectedCountry.country.borders.map((border) => (
-						<div
-							key={border}
-							className={styles.border_button}
-							onClick={() => handleOnClickBorder(border)}
-						>
-							{border}
-						</div>
-					))}
+					<span>Border Countries:</span>
+					<div className={styles.borders_container}>
+						{selectedCountry.country.borders.map((border) => (
+							<div
+								key={border}
+								className={styles.border_button}
+								onClick={() => handleOnClickBorder(border)}
+							>
+								{border}
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 		</div>

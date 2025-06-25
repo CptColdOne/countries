@@ -2,11 +2,15 @@ import styles from './CountryPage.module.sass';
 import SelectedCountryContainer from '../../containers/SelectedCountryContainer';
 import { useNavigate } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
+import { useAppDispatch } from '../../hooks';
+import { resetSelectedCountry } from '../../store/selectedCountry/selectedCountrySlice';
 
 function CountryPage() {
 	const navigate = useNavigate();
+	const dispatch = useAppDispatch();
 
 	const handleOnBack = () => {
+		dispatch(resetSelectedCountry());
 		navigate(-1);
 	};
 
